@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ event[1] }}</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>{{ event[1] }}</h1>
+
+    <div class="card">
+
+        <p><strong>📅 Date:</strong> {{ event[2] }}</p>
+
+        <p><strong>📍 Venue:</strong> {{ event[3] }}</p>
+
+        <p>{{ event[4] }}</p>
+
+        <a href="/register/{{ event[0] }}" class="btn">
+            Register Now
+        </a>
+
+        <br><br>
+
+        <a href="/" class="back">
+            ⬅ Back to Events
+        </a>
+
+    </div>
+
+</div>
+
+</body>
+</html>
