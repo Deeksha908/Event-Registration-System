@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Event Registration</h1>
+
+    <p class="subtitle">
+        Fill in your details to register for the event.
+    </p>
+
+    <form method="POST">
+
+        <input
+            type="text"
+            name="name"
+            placeholder="Enter your Name"
+            required
+        >
+
+        <input
+            type="email"
+            name="email"
+            placeholder="Enter your Email"
+            required
+        >
+
+        <input
+            type="text"
+            name="phone"
+            placeholder="Enter your Phone Number"
+            required
+        >
+
+        <button type="submit" class="btn">
+            Register
+        </button>
+
+    </form>
+
+    <br>
+
+    <a href="/" class="back">⬅ Back to Events</a>
+
+</div>
+
+</body>
+</html>
