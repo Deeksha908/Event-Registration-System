@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Registration System</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>🎉 Event Registration System</h1>
+    <p class="subtitle">
+        Explore upcoming events and register in just one click.
+    </p>
+
+    {% for event in events %}
+
+    <div class="card">
+
+        <h2>{{ event[1] }}</h2>
+
+        <p><strong>📅 Date:</strong> {{ event[2] }}</p>
+
+        <p><strong>📍 Venue:</strong> {{ event[3] }}</p>
+
+        <p>{{ event[4] }}</p>
+
+        <a href="/event/{{ event[0] }}" class="btn">
+            View Details
+        </a>
+
+    </div>
+
+    {% endfor %}
+
+    <a href="/registrations" class="btn"> 
+        View Registrations
+    </a>
+
+</div>
+
+</body>
+</html>+++++
